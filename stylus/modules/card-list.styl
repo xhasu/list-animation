@@ -1,0 +1,88 @@
+
+.card
+	
+	&-list
+		position relative
+		padding 5px
+		overflow hidden
+		box-sizing border-box
+	
+	&-item
+		position relative
+		overflow hidden
+		height 120px
+		transition height 400ms ease-in
+		&:after
+			content ""
+			clear both
+			display block
+			absolute: bottom left 25px right 25px
+			height 1px
+			background-color alpha(grey, .2)
+	
+	&-box
+		position relative
+		padding 20px 25px
+		height 120px
+		display grid
+		align-items center
+		overflow hidden
+		grid-template-columns 100px auto
+		box-sizing border-box
+		opacity 1
+		transition all 400ms ease-out
+	
+	&-head
+		position relative
+		text-align center
+		img
+			display block
+			width auto
+			height 40px
+			margin-left auto
+			margin-right auto
+			margin-bottom 0
+	
+	&-content
+		position relative
+		padding 0 20px
+		box-sizing border-box
+	
+	&-title
+		font-size 18px
+		font-weight 700
+		line-height 1
+		margin-bottom 4px
+	
+	&-text
+		text-align left
+		margin-bottom 16px
+		p
+			font-weight 300
+			color color-coffee-light
+			margin-bottom 0
+			line-height 1
+	
+	&-progress
+		position relative
+		overflow hidden
+		width 100%
+		height 12px
+		background-color alpha(grey, .2)
+		border-radius 6px
+		
+		span
+			absolute: top left bottom
+			display block
+			border-radius 6px
+			width 40%
+			height 100%
+			background-color color-brown
+			background linear-gradient(to right, color-white, color-brown 35%)
+
+
+.card-item.remove
+	height 0
+
+.card-item.remove .card-box
+	opacity 0

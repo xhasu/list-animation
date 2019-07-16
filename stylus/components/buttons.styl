@@ -1,0 +1,65 @@
+// Buttons 
+
+.btn
+	background-color transparent
+	border none
+	border-radius 0px
+	box-sizing border-box
+	color color-black
+	cursor pointer
+	display inline-block
+	margin 4px 2px
+	outline none
+	padding 4px 8px 4px
+	text-align center
+	text-decoration none
+	transition all ease-out .6s
+	vertical-align middle
+	zoom 1
+	
+	&:hover
+	&:focus
+		outline none
+	
+	&:disabled
+		cursor not-allowed
+
+// buttons skins
+.btn-default
+	background-color grey-800	
+	border-radius 4px	
+	color color-light	
+	&:not(:disabled):hover	
+		background-color darken( @background-color, 40% )
+	&:disabled
+		background-color grey-200
+		color color-black
+
+.btn-link
+	background transparent
+	color color-black
+
+// button theme
+.btn-social
+	position relative
+	border-radius 4px
+	padding 4px 8px 4px
+	padding-left 44px
+	transition all ease-out .4s
+	ellipsis()
+	
+	.icon
+		display block
+		absolute: top left bottom
+		border-right 1px solid alpha(black, .2)
+		text-align center
+		width 32px
+		font-size 18px
+		line-height 32px
+	
+for name, value in $social
+	.btn-{name}
+		background-color value
+		color color-light
+		&:hover
+			background-color darken( value, 20% )
